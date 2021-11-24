@@ -9,11 +9,11 @@ registerApplication({
   activeWhen: ["/"],
 });
 
-// registerApplication({
-//   name: "@aizon-bigfinite/navbar",
-//   app: () => System.import("@aizon-bigfinite/navbar"),
-//   activeWhen: ["/"]
-// });
+registerApplication({
+  name: "@aizon-bigfinite/micro-header",
+  app: () => System.import("@aizon-bigfinite/micro-header"),
+  activeWhen: ["/"],
+});
 
 start({
   urlRerouteOnly: true,
