@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>MICRO FRONTENDS - POC</title>
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -48,6 +48,8 @@
     {
       "imports": {
         "@aizon-bigfinite/micro-header": "//localhost:9002/aizon-bigfinite-micro-header.js",
+        "@aizon-bigfinite/micro-home": "//localhost:9004/aizon-bigfinite-micro-home.js",
+        "@aizon-bigfinite/micro-pointing-poker": "//localhost:9003/aizon-bigfinite-micro-pointing-poker.js",
         "@aizon-bigfinite/root-config": "//localhost:9000/aizon-bigfinite-root-config.js"
       }
     }
@@ -68,12 +70,19 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <main></main>
+  <main>
+    <section id="micro-header"></section>
+    <section id="micro-home"></section>
+    <section id="micro-pointing-poker"></section>
+  </main>
   <script>
     System.import('@aizon-bigfinite/root-config');
   </script>
