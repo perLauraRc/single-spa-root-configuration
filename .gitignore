@@ -67,3 +67,5 @@ dist
 *.sln
 *.sw?
 .DS_Store
+
+# Yarn Integrity file
